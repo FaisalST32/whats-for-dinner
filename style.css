@@ -1,0 +1,45 @@
+* {
+    font-family: monospace, Arial;
+}
+
+.container {
+    position: relative;
+    top: 40vh;
+    transform: translateY(-50%);
+}
+
+h1 {
+    text-align: center;
+}
+
+button, button:active {
+    display: block;
+    margin: auto;
+    font-size: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: brown;
+    color: white;
+    padding: 20px 40px;
+    transition: all 200ms ease-in;
+    cursor: pointer;
+}
+
+button:hover:not(:active) {
+    color: black;
+    background-color: burlywood;
+}
+
+#dinner-item {
+    text-align: center;
+    transition: all 200ms ease-in;
+    transform: translateY(0);
+}
+
+#dinner-item.float-up {
+    transform: translateY(-40px);
+}
+
+#dinner-item.selected {
+    font-size: 50px
+}
