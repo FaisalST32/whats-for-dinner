@@ -11,9 +11,9 @@ let earlyEveningItems = [
     'It is still early. Go out!'
 ]
 
-if (new Date().getHours() < 20) {
-    items = [...items, ...earlyEveningItems]
-}
+// if (new Date().getHours() < 20) {
+//     items = [...items, ...earlyEveningItems]
+// }
 
 
 let dinnerItem_el = document.getElementById('dinner-item');
