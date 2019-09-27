@@ -11,9 +11,9 @@ let earlyEveningItems = [
     'It is still early. Go out!'
 ]
 
-// if (new Date().getHours() < 20) {
-//     items = [...items, ...earlyEveningItems]
-// }
+if (new Date().getHours() < 20 && new Date().getHours() > 16) {
+    items = [...items, ...earlyEveningItems]
+}
 
 
 let dinnerItem_el = document.getElementById('dinner-item');
@@ -34,6 +34,9 @@ const decide = () => {
     let index = Math.floor(Math.random() * items.length)
     let itemToDisplay = items[index];
     dinnerItem_el.classList.add('selected');
+    if (new Date().getHours() < 16 && new Date().getHours() > 4){
+        itemToDisplay = 'Dinner? At this time? You kiddin?'
+    }
     dinnerItem_el.innerHTML = itemToDisplay;
     decideButton_el.innerHTML = 'Decide again';
     decideButton_el.removeAttribute('disabled');
